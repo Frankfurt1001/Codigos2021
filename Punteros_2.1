@@ -1,0 +1,24 @@
+#include <stdio.h>
+	void addone(int *p){
+	(*p)++;//parentesis para desreferenciar primero
+		p++;//aqui nos damos cuenta que son diferentes, al incrementar p
+			printf("%p\n", (void*) p);
+		
+}
+	void f( int a){
+		a++;
+	}
+	int main(int argc, char *argv[]) {
+		int x = 0;
+		int *q = &x; // este puntero es diferente del *p
+			
+			
+			addone(q);//el puntero q se copia en p
+				
+				printf("%p\n", (void*) q);//la direccion es la misma, pero son dos variables diferentes
+					//%p imprime int (la direccion de memoria completa), casteamos void para combertirlo a void y que imprima sin problema, se hace cuando el puntero no es int
+					printf("%d\n", x);
+				//En c los pasajes siempre son por valor, y los pasos por valor son UNICAMENTE con punteros
+					return 0;
+	}
+	

@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+int carga(char *);
+void pregunta(int, char *);
+int main(int argc, char *argv[]) {
+	char num[2];
+	srand(time(NULL));
+	int res;
+	printf("Calculadora para aprender multiplicacion\n");
+	res= carga(num);
+	pregunta(res,num);
+	return 0;
+}
+
+int carga(char *p){
+	int multiplicacion;
+	for(int i = 0; i < 2 ;i++){
+		p[i] = (1+rand()%9);
+	}
+	multiplicacion = (p[0]) * (p[1]);
+	return multiplicacion;
+}
+	void pregunta(int a, char *p ){
+		int resp;
+		do{
+			printf("Cual es el resultado de: ");
+			printf("%d x %d\n", *p, *(p+=1));
+			scanf("%d", &resp);
+		}while(resp != a);
+		printf("\n ¡Muy Bien!\n");
+	}
+		

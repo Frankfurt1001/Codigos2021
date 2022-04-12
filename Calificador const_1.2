@@ -1,0 +1,15 @@
+#include <stdio.h>
+void saludo (char *p){
+	printf("Hola, %s\n", p);
+}
+int main(int argc, char *argv[]) {
+	char nombre[80];
+	
+	printf("Ingrese su nombre\n");
+	scanf("%s", nombre);//no hace falta poner ampersand porque ya carga en el primer elemento
+	
+	saludo(nombre);//hace lo mismo que un printf
+	
+	return 0;
+}
+

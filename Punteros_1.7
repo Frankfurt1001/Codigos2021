@@ -1,0 +1,20 @@
+#include <stdio.h>
+//Punteros
+int main(int argc, char *argv[]) {
+	char var; char *p;
+	
+	p = &var;
+	printf("%p\n", p);
+	printf("%p\n", p+1);
+	printf("%p\n", p+2);//Direcciones de memoria contiguas entre si
+	
+	printf("%p\n", (void*) p);
+	p +=1;
+	printf("%p\n", (void*)p);
+	p+=1;
+	printf("%p\n", (void*)p);
+	
+	
+	return 0;
+}
+

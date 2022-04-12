@@ -1,0 +1,18 @@
+#include <stdio.h>
+//Punteros
+int main(int argc, char *argv[]) {
+	int var = 0;
+	int *p, *q;
+	
+	
+	p = &var;//copio la direccion de memoria a p
+	q= 0; // le asigno p a q, se puede asignar un 0, NULL o direccion de memoria
+	
+	*q = 3;//var se le asigna 3
+	
+	*p = 4;//y con este se le reemplaza con un 4
+	printf("%d\n", var);
+	
+	return 0;
+}
+

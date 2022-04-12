@@ -1,0 +1,17 @@
+#include <stdio.h>
+//si alguno de los dos numeros es cero, que devuelva 0, podriamos hacerlo solo con el denominador
+int division_entera( int n, int d){
+	
+	if( d ==0)
+		return 0;/*este return termina la funcion aqui mismo y devuelve lo propuesto
+	SIN importar que este dentro de cualquier funcion o estructura*/
+		
+return  n / d;
+}
+int main(int argc, char *argv[]) {
+	printf("El resultado de la division es %d\n", division_entera( 5,0));//es division entera con un extra
+	
+	/*printf("El resultado de la division es %.2f\n", 5/0.0);//imprime infinito*/
+	return 0;
+}
+

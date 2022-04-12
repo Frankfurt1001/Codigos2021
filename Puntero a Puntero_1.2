@@ -1,0 +1,21 @@
+#include <stdio.h>
+//Puntero a puntero
+void imprimir (int *p){//los arreglos pasan como punteros al darselas a las funciones
+	
+	for(int i = 0; i < 5; i++)
+		printf("%d\n", i[p]);//que es lo mismo que p[i]
+	
+	//0[p] =10; sera igual que *(0+p) = 10;
+	
+}
+int main(int argc, char *argv[]) {// en el main ya esta esto
+	int arreglo [5]= {1,2,3,4,5};
+	
+	int *p[10]; // esto es un arreglo de 10 puntero enteros
+	
+	imprimir(arreglo);
+
+	
+	return 0;
+}
+

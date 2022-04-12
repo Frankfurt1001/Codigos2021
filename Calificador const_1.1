@@ -1,0 +1,15 @@
+#include <stdio.h>
+//calificador const
+void addone (const int *p){// a lo que este apuntando p, en la funcion no puede cambiar
+	(*p)++;//estamos tratando de modificar el contenido apuntado por p
+}
+int main(int argc, char *argv[]) {
+	int x = 3;
+	
+	x++;
+	
+	addone(&x);
+	printf("%d\n", x);
+	return 0;
+}
+

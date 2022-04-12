@@ -1,0 +1,15 @@
+#include <stdio.h>
+//arreglos de cadenas
+int main(int argc, char *argv[]) {
+	char *numeros[5] = {"cero", "uno", "dos", "tres", "cuatro"};
+	printf("%p\n",numeros);// imprime la direccion de memoria del elemento del puntero
+	printf("%p\n", (void*)&numeros[0]);/*el nombre de el arreglo es la misma direccion
+	que la direccion de memoria del primer elemento de la fila*/
+	
+	//estas dos formas son diferentes
+	
+	printf("%p\n", (void*)&numeros[0][0]);//direccion de memoria del primer elemento de la cadena
+	printf("%p\n", (void*)numeros[0]);//direccion de memoria del puntero en el primer elemento de la cadena
+	return 0;
+}
+

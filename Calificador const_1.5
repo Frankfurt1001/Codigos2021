@@ -1,0 +1,18 @@
+#include <stdio.h>
+void imprimir(int * const p){// ahora p es un puntero constante, no cambia
+	for (int i = 0; i < 5; i++){
+	printf("%d\n",*(p+i));	// si o si hay que desreferenciar primero, sino tirara error
+	}
+	for (int i = 0; i < 5; i++){
+		printf("%d\n",*(p+i));	
+	}
+	
+}
+int main(int argc, char *argv[]) {
+	int arreglo [5]= {1,2,3,4,5};
+	
+	imprimir(arreglo);
+	imprimir(arreglo);// la 2da vez inserta un 4 en la posicion 2
+	return 0;
+}
+

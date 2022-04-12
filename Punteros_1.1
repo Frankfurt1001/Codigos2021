@@ -1,0 +1,16 @@
+#include <stdio.h>
+//Punteros
+int main(int argc, char *argv[]) {
+	char var;
+	char *q;
+
+	
+	q = &var;// con esto la direccion de memoria de var se asigna a p cada vez que se ejecuta
+	
+	*q = 21; // * aqui es un OPERADOR DE DESREFERENCIA y se usa para decir que trate a q como si fuera var
+	
+	printf("%p\n", q);//se usa %p para char	
+	printf("%p\n", &var);// &para que muestre la direccion de memoria
+	return 0;
+}
+

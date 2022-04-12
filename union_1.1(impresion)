@@ -1,0 +1,21 @@
+#include <stdio.h>
+//union
+union int_float{
+	int entero;
+	float real;
+};
+union int_char{
+	int dato;
+	char byte[4];
+};//las variables las divide,
+int main(int argc, char *argv[]) {
+	union int_float u;
+	
+	printf("Asignando a float\n");
+	u.real = 3.125;
+	
+	printf("Imprimiendo float =>%f\n", u.real);// como  IEEE
+	printf("Imprimiendo entero =>%d\n", u.entero);//como orden de potencia
+	return 0;
+}
+

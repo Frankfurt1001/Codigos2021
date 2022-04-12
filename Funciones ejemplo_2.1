@@ -1,0 +1,17 @@
+#include <stdio.h>
+int max( int a, int b)//lista de parametros
+{
+if (a>b)
+	return a;
+else 
+	return b;
+}/*es posible tener mas de un return en una función
+con una salvedad: si el flujo del programa llega a un "return", la función finaliza.*/
+int main(int argc, char *argv[]) {
+	int a= 4, a = 3;
+	printf("El mayor es %d\n", max(a,b));/*lista de argumentos
+	no confundir con el a y b de arriba, estas son globales y las del arreglo son temporales*/
+	
+	return 0;
+}
+

@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*En el trabajo, nosotros necesitamos que la semilla sea variable, no constante
+un ejemplo de un numero que cambia constantemente en la computadora, es el UNIX
+dicho numero registra la cantidad de segundos que pasaron desde el 1 de enero de 1970*/
+#include <time.h>//este archivo cabecera nos servira para el unix
+int main(int argc, char *argv[]) {
+	srand(time(NULL));/*invoco la funcion time pasandole NULL como argumento, esto seria UNIX
+	al ser un numero diferente cada vez que ejecutamos el programa
+	ira cambiando cada vez que lo ejecutemos*/
+	for(int i = 0; i < 10; i++){
+	printf("%d\n", rand());
+	}
+	return 0;
+}
+

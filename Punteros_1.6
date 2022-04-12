@@ -1,0 +1,30 @@
+#include <stdio.h>
+//Punteros
+int main(int argc, char *argv[]) {
+	long int var[5] = {1};
+	long int *p;
+	
+	char *q;
+	void *r;
+
+
+	p = &var[0];
+	
+	
+	r = p;
+	q = r;
+	
+	printf("%p\n", (void*) p);
+	printf("%p\n", (void*) q);// aqui pasa lo mismo, es una chanchada
+	// convertimos q para que tenga a p a pesar de ser de tipo diferente
+	// el compilador sabe cuantos bites tiene el puntero, para saber cuantos tiene que modificar
+	printf("%lu\n", sizeof p);
+	printf("%lu\n", sizeof q);
+	
+	*q = 3;
+	for ( int i = 0; i < 5; i++){
+		printf("%ld\n", var [i]);
+	}
+	return 0;
+}
+

@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(int argc, char *argv[]) {
+	srand(time(NULL));
+	for(int i = 0; i < 10; i++){
+		printf("%d\n", 1+rand()%10);/*lo que podemos hacer para nuestro programa es 
+		usar el Operador modulo(%), el mismo devuelve el resto de la division entera.
+		un ejemplo seria sacar %10 de un numero:
+		el resto de dividir entre 10 sera un numero entre 0 y 9.
+		Si quisieramos tener un numero entre 1 y 10 le tendriamos que poner
+		un offset (1+)*/
+	}
+	return 0;
+}
+

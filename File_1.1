@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+	FILE *fp;
+	char archivo[]="C:\\Users\\PC\\OneDrive - frc.utn.edu.ar\\Escritorio\\prueba file.txt";
+	int caracter;
+	char cadena[80];
+	// para entrar a una ruta, ponemos doble barra; ejm: c\\Documentos\\fruta.txt
+	fp = fopen(archivo, "r");//abrimos un archivo como lectura
+	if(fp == NULL){
+		printf("No existe el archivo\n");
+
+	}return 1;
+	fgets(cadena, 80, fp);
+	
+	printf("%s\n", cadena);
+	
+	
+	fclose(fp);//cerramos el archivo
+	return 0;
+}
+

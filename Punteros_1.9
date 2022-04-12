@@ -1,0 +1,11 @@
+#include <stdio.h>
+//Punteros
+int main(int argc, char *argv[]) {
+	int a = 3, b = 2, c;
+	int *p = &a;
+	c = a* *p;// a por el puntero, lo primero que ve el compilador es la desreferencia
+	
+	printf("%d\n", c);
+	return 0;
+}
+
